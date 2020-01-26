@@ -16,7 +16,7 @@ header {
     align-items: center;
 }
 
-nav {
+.header-nav {
     flex: .5;
 }
 
@@ -34,6 +34,55 @@ nav {
 
 .logo-container {
     flex: 2;
+}
+
+.trk-list {
+    display: flex;
+    background: #e55c5c;
+    height: 5rem;
+    width: 80%;
+    margin: auto;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.trk-list:hover .chart-container{
+    opacity: 1;
+  }
+
+.item-name {
+    font-size: 36px;
+    list-style: none;
+    flex: .6;
+    color: white;
+}
+
+.item-price {
+    font-size: 24px;
+    list-style: none;
+    flex: .2;
+    color: white;
+}
+
+.item-img {
+    flex: .1;
+    height: 3rem;
+    width: .5rem;
+    margin: 1rem;
+}
+
+.chart-container {
+    width: 80%;
+    margin: auto;
+    background: #e55c5c;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 300ms ease;
+}
+
+.chart-item {
+    height: 10rem;
 }
 
 

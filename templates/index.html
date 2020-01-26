@@ -8,17 +8,44 @@
     <link rel="stylesheet" href="../static/style.css">
     <title>Amazon Tracker</title>
 </head>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js'></script>
 <body>
     <header>
         <div class="logo-container">
             <h2 class="logo">Amazon Tracker</h2>
         </div>
-        <nav>
+        <nav class="header-nav">
             <ul class="nav-links">
-                <li><a class="nav-link" href="">About</a></li>
                 <li><a class="nav-link" href="">Github</a></li>
+                <li><a class="nav-link" href="">Login</a></li>
             </ul>
         </nav>
     </header>
+    <nav>
+        <ul class="trk-list">
+            <img class="item-img" src="../static/img/airpod.jpg" alt="">
+            <li class="item-name">Air Pods</li>
+            <li class="item-price">$99.99</li> 
+        </ul>
+        <ul class="chart-container">
+            <canvas class="chart-item" id="myChart"></canvas>
+        </ul>
+    </nav>
+    
+    <script>var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',          
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 2, 20, 30, 45]
+                    }]
+                },
+            
+                options: {}
+            });</script>
 </body>
 </html>

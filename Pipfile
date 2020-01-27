@@ -10,7 +10,8 @@ pylint = "*"
 flask = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
-chart-js = "*"
+requests = "*"
+beautifulsoup4 = "*"
 
 [requires]
 python_version = "3.7"

@@ -12,6 +12,8 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         url = request.form['url']
+        if url == '':
+            return render_template('index.html', message='Please enter correct url')
     return render_template('index.html')
 
 if __name__ == '__main__':
